@@ -1,0 +1,457 @@
+ 
+.logo-corner {
+            position: absolute;
+            top: 5px;
+            left: 100px;
+            width: 125px;
+            height: 125px;
+            border-radius: 15px;
+            object-fit: cover;
+            border: 3px solid #ffffff;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+            z-index: 1000;
+        }
+        
+/* Estilos generales */
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #fff9fb;
+            color: #333;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        /* Sección de la cuidadora */
+        .caregiver-section {
+            background: linear-gradient(135deg, #f8e1f4 0%, #e6f0ff 100%);
+            border-radius: 20px;
+            padding: 40px;
+            margin: 50px 0;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .caregiver-section::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url('https://img.icons8.com/color/96/000000/dog-paw-print.png');
+            background-repeat: repeat;
+            opacity: 0.05;
+            z-index: 0;
+        }
+
+        .caregiver-content {
+            position: relative;
+            z-index: 1;
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            gap: 40px;
+        }
+
+        .caregiver-image {
+            flex: 1;
+            min-width: 300px;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        .caregiver-image img {
+            width: 100%;
+            height: auto;
+            display: block;
+            transition: transform 0.5s ease;
+        }
+
+        .caregiver-image:hover img {
+            transform: scale(1.05);
+        }
+
+        .caregiver-info {
+            flex: 2;
+            min-width: 300px;
+        }
+
+        .section-title {
+            color: #8a2be2;
+            font-size: 2.2rem;
+            margin-bottom: 20px;
+            position: relative;
+            display: inline-block;
+        }
+
+        .section-title::after {
+            content: "";
+            position: absolute;
+            bottom: -10px;
+            left: 0;
+            width: 60px;
+            height: 4px;
+            background-color: #ff6b9d;
+            border-radius: 2px;
+        }
+
+        .caregiver-description {
+            font-size: 1.1rem;
+            line-height: 1.6;
+            margin-bottom: 30px;
+            color: #555;
+        }
+
+        .experience-list {
+            list-style-type: none;
+            padding: 0;
+            margin-bottom: 30px;
+        }
+
+        .experience-list li {
+            padding: 12px 0;
+            padding-left: 40px;
+            position: relative;
+            font-size: 1.1rem;
+            margin-bottom: 8px;
+        }
+
+        .experience-list li::before {
+            content: "🐾";
+            position: absolute;
+            left: 0;
+            font-size: 1.3rem;
+        }
+
+        .stats-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            margin-top: 30px;
+        }
+
+        .stat-box {
+            background-color: white;
+            border-radius: 12px;
+            padding: 20px;
+            flex: 1;
+            min-width: 150px;
+            text-align: center;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            transition: transform 0.3s ease;
+        }
+
+        .stat-box:hover {
+            transform: translateY(-5px);
+        }
+
+        .stat-number {
+            font-size: 2.5rem;
+            font-weight: bold;
+            color: #8a2be2;
+            margin-bottom: 5px;
+        }
+
+        .stat-label {
+            font-size: 0.9rem;
+            color: #666;
+        }
+
+        .heart-quote {
+            font-style: italic;
+            font-size: 1.2rem;
+            color: #ff6b9d;
+            margin-top: 30px;
+            padding: 20px;
+            border-left: 4px solid #ff6b9d;
+            background-color: rgba(255, 107, 157, 0.05);
+            border-radius: 0 8px 8px 0;
+        }
+
+        @media (max-width: 768px) {
+            .caregiver-content {
+                flex-direction: column;
+            }
+            
+            .caregiver-image, .caregiver-info {
+                flex: none;
+                width: 100%;
+            }
+        } 
+/* Estilos generales */
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f9f3ff;
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+        
+        header {
+            background-color: #8a2be2;
+            color: white;
+            text-align: center;
+            padding: 2rem 0;
+            margin-bottom: 2rem;
+        }
+        
+        h1 {
+            margin: 0;
+            font-size: 2.5rem;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        /* Estilos para los servicios */
+        .services {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2rem;
+            margin-bottom: 3rem;
+        }
+        
+        .service-card {
+            background-color: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+        
+        .service-card:hover {
+            transform: translateY(-10px);
+        }
+        
+        .service-image {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+        
+        .service-content {
+            padding: 1.5rem;
+        }
+        
+        .service-title {
+            color: #8a2be2;
+            margin-top: 0;
+            font-size: 1.5rem;
+        }
+        
+        .service-benefits {
+            list-style-type: none;
+            padding: 0;
+        }
+        
+        .service-benefits li {
+            padding: 0.5rem 0;
+            position: relative;
+            padding-left: 1.5rem;
+        }
+        
+        .service-benefits li:before {
+            content: "✓";
+            color: #8a2be2;
+            font-weight: bold;
+            position: absolute;
+            left: 0;
+        }
+        
+        footer {
+            background-color: #8a2be2;
+            color: white;
+            text-align: center;
+            padding: 1.5rem 0;
+            margin-top: 3rem;
+        }
+
+.form-container {
+    max-width: 800px;
+    margin: 0 auto;
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    text-align: center;
+    color: #4b6cb7;
+}
+
+fieldset {
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+legend {
+    font-weight: bold;
+    color: #4b6cb7;
+    padding: 0 10px;
+}
+
+/* Estilos para los grupos de formulario */
+.form-group {
+    margin-bottom: 15px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+input[type="text"],
+input[type="number"],
+input[type="tel"],
+select,
+textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+input[type="number"] {
+    -moz-appearance: textfield;
+}
+
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+.radio-group {
+    display: flex;
+    gap: 15px;
+}
+
+.radio-group label {
+    font-weight: normal;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+textarea {
+    resize: vertical;
+}
+
+/* Estilo del botón */
+.submit-btn {
+    background-color: #4b6cb7;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    width: 100%;
+    transition: background-color 0.3s;
+}
+
+.submit-btn:hover {
+    background-color: #3a56a0;
+}
+.map-container {
+            width: 100%;
+            max-width: 600px; /* Ajusta el ancho máximo según necesites */
+            margin: 20px auto;
+            border-radius: 15px; /* Esquinas redondeadas */
+            overflow: hidden; /* Importante para que las esquinas del mapa se redondeen */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra opcional */
+            border: 2px solid #e0e0e0; /* Borde opcional */
+        }
+        
+        .map-iframe {
+            width: 600px;
+            height: 600px; /* Ajusta la altura según necesites */
+            border: 0; /* Elimina el borde por defecto del iframe */
+            display: block;
+        }
+.social-buttons {
+            display: flex;
+            gap: 15px;
+            padding: 20px;
+            flex-wrap: wrap;
+        }
+        
+        /* Estilo base para los botones */
+        .social-btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: 12px 25px;
+            border-radius: 50px; /* Esquinas muy redondeadas (forma de cápsula) */
+            text-decoration: none;
+            font-family: 'Arial', sans-serif;
+            font-weight: bold;
+            font-size: 16px;
+            transition: all 0.3s ease;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        
+        /* Botón de WhatsApp */
+        .whatsapp-btn {
+            background-color: #25D366;
+            color: white;
+            border: 2px solid #25D366;
+        }
+        
+        /* Botón de Instagram */
+        .instagram-btn {
+            background: linear-gradient(45deg, #405DE6, #5851DB, #833AB4, #C13584, #E1306C, #FD1D1D);
+            color: white;
+            border: 2px solid transparent;
+        }
+        
+        /* Efecto hover */
+        .social-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+        }
+        
+        .whatsapp-btn:hover {
+            background-color: white;
+            color: #25D366;
+        }
+        
+        .instagram-btn:hover {
+            background: white;
+            color: #E1306C;
+            border-color: #E1306C;
+        }
+        
+        /* Iconos */
+        .social-icon {
+            margin-right: 10px;
+            font-size: 20px;
+        }
+        
+        /* Versión móvil */
+        @media (max-width: 480px) {
+            .social-buttons {
+                flex-direction: column;
+            }
+            
+            .social-btn {
+                width: 100%;
+                justify-content: center;
+            }
+        }
